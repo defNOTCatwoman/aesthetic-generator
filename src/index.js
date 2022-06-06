@@ -4,8 +4,6 @@ const randBtn = document.querySelector('.randomBtn');
 let randomRGB = [];
 let x;
 
-
-
 function randomize() {
     randomRGB = [];
     for (let i = 1; i <= 3; i++) {
@@ -36,12 +34,5 @@ function rgbToHex(color) {
     return "#" + ((1 << 24) + (+color[0] << 16) + (+color[1] << 8) + +color[2]).toString(16).slice(1).toUpperCase();
 }
 
-console.log(randomize().toString());
-console.log(randomize());
-console.log(randomize());
-
 
 randBtn.addEventListener('click', randomizeRGB);
-
-let meep = randomize().toString();
-console.log(rgbToHex(meep));
