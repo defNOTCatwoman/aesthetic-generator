@@ -31,7 +31,8 @@ function randomizeRGB() {
 
 function rgbToHex(color) {
     color = color.replace(/[^\d,]/g, "").split(",");
-    return "#" + ((1 << 24) + (+color[0] << 16) + (+color[1] << 8) + +color[2]).toString(16).slice(1).toUpperCase();
+    return "#" + ((1 << 24) + (+color[0] << 16) + (+color[1] << 8)
+     + +color[2]).toString(16).slice(1).toUpperCase();
 }
 
 
