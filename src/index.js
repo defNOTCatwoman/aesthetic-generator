@@ -16,15 +16,15 @@ function randomize() {
 function randomizeRGB() {
     let hex = [];
     let text;
-    for (let i = 0; i < colorBlock.length; i++) {
+    for (const element of colorBlock) {
         let color = randomize().toString();
         text = color.split(',');
         if ((text[0] < 120) || (text[1] < 120) || (text[2] < 120)) {
-            colorBlock[i].setAttribute('style', "color:#FFFFFF;" + " background-color: rgb(" + color + ")");
-            colorBlock[i].innerHTML = rgbToHex(color);
+            element.setAttribute('style', "color:#FFFFFF;" + " background-color: rgb(" + color + ")");
+            element.innerHTML = rgbToHex(color);
         } else {
-            colorBlock[i].setAttribute('style', "background-color: rgb(" + color + ")");
-            colorBlock[i].innerHTML = rgbToHex(color);
+            element.setAttribute('style', "background-color: rgb(" + color + ")");
+            element.innerHTML = rgbToHex(color);
         }
     }
 }
