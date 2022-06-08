@@ -14,7 +14,6 @@ function randomize() {
 }
 
 function randomizeRGB() {
-    let hex = [];
     let text;
     for (const element of colorBlock) {
         let color = randomize().toString();
